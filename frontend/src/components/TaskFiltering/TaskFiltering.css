@@ -1,0 +1,103 @@
+.task-filtering {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-filtering h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #495057;
+  }
+  
+  .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+  }
+  
+  .filter-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+  }
+  
+  .filter-group input,
+  .filter-group select {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .filter-group input:focus,
+  .filter-group select:focus {
+    border-color: #6c757d;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(108, 117, 125, 0.25);
+  }
+  
+  .date-range {
+    min-width: 300px;
+  }
+  
+  .date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .date-inputs input {
+    flex: 1;
+  }
+  
+  .date-inputs span {
+    color: #6c757d;
+  }
+  
+  .reset-button {
+    margin-top: auto;
+    padding: 8px 16px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: flex-end;
+  }
+  
+  .reset-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .filters-container {
+      flex-direction: column;
+    }
+    
+    .filter-group {
+      width: 100%;
+      min-width: unset;
+    }
+    
+    .date-range {
+      min-width: unset;
+    }
+    
+    .reset-button {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }

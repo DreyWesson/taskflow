@@ -1,0 +1,15 @@
+{
+  "name": "04.nodemon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nodemon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^4.0.1"
+  }
+}

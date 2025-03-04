@@ -1,0 +1,42 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "${BACKEND_PORT:-5500}:${BACKEND_PORT:-5500}"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - app_network
+    env_file:
+      - .env
+    command: npm run mynodemon:custom
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "${FRONTEND_PORT:-5173}:${FRONTEND_PORT:-5173}"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - app_network
+    env_file:
+      - .env
+    command: npm run dev
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  node_modules_backend:
+  node_modules_frontend:
