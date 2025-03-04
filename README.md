@@ -1,6 +1,6 @@
 # Application Setup Guide
 
- ![Video Demo](assets/taskflow.mp4)
+ ![Video Demo](./assets/taskflow.mp4)
 
 This guide provides instruction for setting up and running the application using both local development and Docker environments.
 
