@@ -58,7 +58,7 @@ const TaskColumn = ({ title, status, tasks, onEditTask }) => {
         ))}
         
         {tasks.length === 0 && (
-          <div className="empty-state" aria-label="No tasks in this column" data-cy="empty-column">
+          <div className="empty-state" role="listitem" aria-label="No tasks in this column" data-cy="empty-column">
             <p>No tasks yet</p>
             <p>Drag tasks here or add a new task</p>
           </div>
